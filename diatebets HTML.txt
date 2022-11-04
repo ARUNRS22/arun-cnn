@@ -1,0 +1,315 @@
+<!-- This is GUI for Breast Cancer Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>akash app</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-image: url('https://i.imgur.com/RE8NF7q.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-size: cover;
+ }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border: 3px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+
+    .button_css:hover {
+    color: #000000 ;
+    background: #6A5ACD;
+    border-color: #FFFFFF ;
+    transition: all 0.4s ease 0s;
+    }
+
+
+   .intro-bg .socials a{
+	color: #ffff;
+	font-size: 1.5em;
+	padding: 4px;
+	transition: all 0.5s linear;
+}
+
+   .intro-bg .socials a:hover {
+	color:  #ffffff;
+	transition: all 0.4s ease 0s;
+}
+
+*,body,input,select {   font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"> Akash Desai </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://www.kaggle.com/uciml/pima-indians-diabetes-database"> Description about Project <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="https://akashad98.github.io/my_portfolio/">My portfolio </a>
+     </li>
+
+
+  </div>
+</nav>
+
+
+
+ <section class="login">
+
+    <!-- Get input for predict the cancer -->
+    <center>
+        <h2 class="text-primary"> <b>Ai For Healthcare</b> </h2>
+    <p class="text-white"><b>Hi this is  Machine Learning app which predicts whether the patient has Diabetes or Not!</b></p>
+
+<h1>The select element</h6>
+<p>The select element is used to create a drop-down list.</p>
+
+<form action="{{ url_for('predict')}}"method="post">
+<label for="HighBP">choose a HighBP:</label>
+<select name="HighBP" id="HighBP"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for ="HighChol">choose a HighChol:</label>
+<select name="HighChol" id="HighChol"
+<option value="1">yes</option>
+<option value="0">no</option
+<label for="CholCheck in 5 Year">choose a CholCheck in 5 Year:</label>
+<select name="CholCheck in 5 Year" id="CholCheck in 5 Year"
+<option value="1">yes</option>
+<option value="0">no</option>
+<input type="text" name="BMI" placeholder="BMI" required="required" /> <br>
+<label for="Smoked at least 100 cigarettes in your entire life?"<chosse a Smoked at least 100 cigarettes in your entire life?:</label>
+<select name="Smoked at least 100 cigarettes in your entire life?" id="Smoked at least 100 cigarettes in your entire life?"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="Had a stroke">choose a Had a stroke:</label>
+<select name="Had a stroke" id="Had a stroke"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="Had coronary heart disease (CHD) or myocardial infarction (MI)">choose a Had coronary heart disease (CHD) or myocardial infarction (MI):</label>
+<select name="Had coronary heart disease (CHD) or myocardial infarction (MI)" id="Had coronary heart disease (CHD) or myocardial infarction (MI)"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="physical activity in past 30 days">choose a physical activity in past 30 days:</label>
+<select name=""physical activity in past 30 days" id="physical activity in past 30 days"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="Consume Fruit 1 or more times per day">choose a Consume Fruit 1 or more times per day:</label>
+select name=""Consume Fruit 1 or more times per day" id="Consume Fruit 1 or more times per day"
+<option value="1">yes</option>
+<option value="0">no</opiton>
+<label for="Consume Vegetables 1 or more times per day">choose a Consume Vegetables 1 or more times per day:</label>
+<select name="Consume Vegetables 1 or more times per day" id="Consume Vegetables 1 or more times per day"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="HvyAlcoholConsump(adult men >=14 drinks per week and adult women>=7 drinks per week)">choose a HvyAlcoholConsump(adult men >=14 drinks per week and adult women>=7 drinks per week):</label>
+<select name="HvyAlcoholConsump(adult men >=14 drinks per week and adult women>=7 drinks per week)" id="HvyAlcoholConsump(adult men >=14 drinks per week and adult women>=7 drinks per week)"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="AnyHealthcareHave any kind of health care coverage, including health insurance, prepaid plans">choose a AnyHealthcareHave any kind of health care coverage, including health insurance, prepaid plans:</label>
+<select name=""AnyHealthcareHave any kind of health care coverage, including health insurance, prepaid plans" id="AnyHealthcareHave any kind of health care coverage, including health insurance, prepaid plans"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="NoDocbcCost Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?">choose a NoDocbcCost Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?:</label>
+<select name="NoDocbcCost Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?" id="NoDocbcCost Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="Would you say that in general your health is">choose a Would you say that in general your health is:</label>
+<select name="Would you say that in general your health is" id="Would you say that in general your health is"
+<option value="1">excellent</option>
+<option value="2">very good</option>
+<option value="3">good</option>
+<option value="4">fair</option>
+<option value="5">poor</option>
+<label for="physical illness or injury days in past 30 days"choose a physical illness or injury days in past 30 days:</label>
+<select name="physical illness or injury days in past 30 days" id="physical illness or injury days in past 30 days"
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<label for="Do you have serious difficulty walking or climbing stairs?">choose a Do you have serious difficulty walking or climbing stairs?:</label>
+<select name="Do you have serious difficulty walking or climbing stairs?" id="Do you have serious difficulty walking or climbing stairs?"
+<option value="1">yes</option>
+<option value="0">no</option>
+<label for="Sex">choose a sex:</label>
+<select name="Sex" id="Sex"
+<option value="1">male</option>
+<option value="0">female</option>
+<label for="Age category 1=18-24 2=25-35 3=36-46 4=47-57 5=58-68 6=69-79 7=80 or above">choose a Age category 1=18-24 2=25-35 3=36-46 4=47-57 5=58-68 6=69-79 7=80 or above:</label>
+<select name="Age category 1=18-24 2=25-35 3=36-46 4=47-57 5=58-68 6=69-79 7=80 or above" id="Age category 1=18-24 2=25-35 3=36-46 4=47-57 5=58-68 6=69-79 7=80 or above"
+<option value="1">1</option>
+<option value="2">2</option>       
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5>5</option>
+<option value="6">6</option>
+<option value="7">6</option>
+<label for="MentHlthdays of poor mental health scale 1-30 days">choose a MentHlthdays of poor mental health scale 1-30 days:</label>
+<select name="MentHlthdays of poor mental health scale 1-30 days" id="MentHlthdays of poor mental health scale 1-30 days"
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<label for="Education level scale 1-6 1=Never attended school or only kindergarten 2=elementary 3=up to 10th 4=up to 12th 5=Any UG 6=PG or above">choose a Education level scale 1-6 1=Never attended school or only kindergarten 2=elementary 3=up to 10th 4=up to 12th 5=Any UG 6=PG or above:</label>
+<select name="Education level scale 1-6 1=Never attended school or only kindergarten 2=elementary 3=up to 10th 4=up to 12th 5=Any UG 6=PG or above" id="Education level scale 1-6 1=Never attended school or only kindergarten 2=elementary 3=up to 10th 4=up to 12th 5=Any UG 6=PG or above"
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<label for="Income(per anum) scale  1-8 1=>10,000 2=>20,000 3=>30,000 4=>40,000 5=>50,000 6=>60,000 7=>70,000 8=above 70,000">choose a Income(per anum) scale  1-8 1=>10,000 2=>20,000 3=>30,000 4=>40,000 5=>50,000 6=>60,000 7=>70,000 8=above 70,000:</label>
+<select name="Income(per anum) scale  1-8 1=>10,000 2=>20,000 3=>30,000 4=>40,000 5=>50,000 6=>60,000 7=>70,000 8=above 70,000" id="Income(per anum) scale  1-8 1=>10,000 2=>20,000 3=>30,000 4=>40,000 5=>50,000 6=>60,000 7=>70,000 8=above 70,000"
+<option value="1">1</option>
+<option value="2">2/option>
+<option value="3">3/option>
+<option value="4">4/option>
+<option value="5">5/option>
+<option value="6">6/option>
+<option value="7">7/option>
+<option value="8">8/option>
+
+    <form action="{{ url_for('predict')}}"method="post">
+
+         <h6 class="text-white">Enter the values for diabetis prediction</h6>
+    	<input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /> <br>
+        <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+		<input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+		<input type="text" name="SkinThickness" placeholder=" SkinThickness" required="required" /><br>
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+		<input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="DiabetesPedigreeFunction" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" />
+    <div class="text-muted">.
+
+    </div> 
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Dibetis</strong></button></a>
+        </div>
+
+    </form>
+
+
+   <!-- Show predicted output using ML model -->
+   <div>
+       <a>
+
+ <a class="text-warning text-decoration-none" href="#"
+
+   <h2 >{{ prediction_text }}</h2> </a>
+   <section class="intro-bg ">
+
+    <div class="content">
+        <div class="text-centre socials">
+           <a href="https://github.com/akashAD98"><i class="fa fa-github" aria-hidden="true"></i>
+			<a href="https://www.linkedin.com/in/akash-desai-1b482b196/"><i class="fa fa-linkedin" aria-hidden="true"></i>
+			<a href="https://instagram.com/akash_a_desai"><i class="fa fa-instagram" aria-hidden="true"></i>
+
+			<a href="https://twitter.com/1998aks2"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+
+        </div>
+         </center>
+    </div>
+    </section>
+       </center>
+        <footer>
+      <div class="container text-muted text-center py-3 mt-5">
+        <h6>
+          Copyright  &copy; 2020 |
+          <a class="text-whitte" href="#about"
+            >Akash Desai</a
+          >
+        </h6>
+      </div>
+    </footer>
+
+
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
